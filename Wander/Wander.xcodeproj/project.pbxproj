@@ -18,6 +18,16 @@
 		BCCBD4922657D638007805D9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BCCBD4902657D638007805D9 /* LaunchScreen.storyboard */; };
 		BCCBD49D2657D638007805D9 /* WanderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCCBD49C2657D638007805D9 /* WanderTests.swift */; };
 		BCCBD4A82657D638007805D9 /* WanderUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCCBD4A72657D638007805D9 /* WanderUITests.swift */; };
+		BCCBD4C72657DCD5007805D9 /* WNPhotoViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCCBD4C62657DCD5007805D9 /* WNPhotoViewModel.swift */; };
+		BCCBD4C82657DCD5007805D9 /* WNPhotoViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCCBD4C62657DCD5007805D9 /* WNPhotoViewModel.swift */; };
+		BCCBD4D42657E0E3007805D9 /* WNNetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCCBD4D32657E0E3007805D9 /* WNNetworkManager.swift */; };
+		BCCBD4D52657E0E3007805D9 /* WNNetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCCBD4D32657E0E3007805D9 /* WNNetworkManager.swift */; };
+		BCCBD4DD2657E100007805D9 /* WNNetworkHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCCBD4DC2657E100007805D9 /* WNNetworkHandler.swift */; };
+		BCCBD4DE2657E100007805D9 /* WNNetworkHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCCBD4DC2657E100007805D9 /* WNNetworkHandler.swift */; };
+		BCCBD4E32657E13F007805D9 /* WanderAppConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCCBD4E22657E13F007805D9 /* WanderAppConfig.swift */; };
+		BCCBD4E42657E13F007805D9 /* WanderAppConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCCBD4E22657E13F007805D9 /* WanderAppConfig.swift */; };
+		BCCBD4FB2657FF38007805D9 /* AppConfigProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCCBD4FA2657FF38007805D9 /* AppConfigProvider.swift */; };
+		BCCBD4FC2657FF38007805D9 /* AppConfigProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCCBD4FA2657FF38007805D9 /* AppConfigProvider.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -61,6 +71,11 @@
 		BCCBD4A72657D638007805D9 /* WanderUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WanderUITests.swift; sourceTree = "<group>"; };
 		BCCBD4A92657D638007805D9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BCCBD4BF2657D877007805D9 /* Wander-bridging-header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Wander-bridging-header.h"; sourceTree = "<group>"; };
+		BCCBD4C62657DCD5007805D9 /* WNPhotoViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WNPhotoViewModel.swift; sourceTree = "<group>"; };
+		BCCBD4D32657E0E3007805D9 /* WNNetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WNNetworkManager.swift; sourceTree = "<group>"; };
+		BCCBD4DC2657E100007805D9 /* WNNetworkHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WNNetworkHandler.swift; sourceTree = "<group>"; };
+		BCCBD4E22657E13F007805D9 /* WanderAppConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WanderAppConfig.swift; sourceTree = "<group>"; };
+		BCCBD4FA2657FF38007805D9 /* AppConfigProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppConfigProvider.swift; sourceTree = "<group>"; };
 		CDF407E9B6D701A2B2C4F0CD /* Pods-WanderTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WanderTests.release.xcconfig"; path = "Target Support Files/Pods-WanderTests/Pods-WanderTests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -131,6 +146,12 @@
 				BCCBD4852657D636007805D9 /* AppDelegate.swift */,
 				BCCBD4872657D636007805D9 /* SceneDelegate.swift */,
 				BCCBD4892657D636007805D9 /* ViewController.swift */,
+				BCCBD4E22657E13F007805D9 /* WanderAppConfig.swift */,
+				BCCBD4F92657FF17007805D9 /* Common */,
+				BCCBD4D22657E0C7007805D9 /* Network */,
+				BCCBD4C52657DCA3007805D9 /* View */,
+				BCCBD4C42657DC97007805D9 /* ViewModel */,
+				BCCBD4C32657DC90007805D9 /* Model */,
 				BCCBD48B2657D636007805D9 /* Main.storyboard */,
 				BCCBD48E2657D638007805D9 /* Assets.xcassets */,
 				BCCBD4902657D638007805D9 /* LaunchScreen.storyboard */,
@@ -155,6 +176,45 @@
 				BCCBD4A92657D638007805D9 /* Info.plist */,
 			);
 			path = WanderUITests;
+			sourceTree = "<group>";
+		};
+		BCCBD4C32657DC90007805D9 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		BCCBD4C42657DC97007805D9 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				BCCBD4C62657DCD5007805D9 /* WNPhotoViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		BCCBD4C52657DCA3007805D9 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		BCCBD4D22657E0C7007805D9 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				BCCBD4D32657E0E3007805D9 /* WNNetworkManager.swift */,
+				BCCBD4DC2657E100007805D9 /* WNNetworkHandler.swift */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		BCCBD4F92657FF17007805D9 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				BCCBD4FA2657FF38007805D9 /* AppConfigProvider.swift */,
+			);
+			path = Common;
 			sourceTree = "<group>";
 		};
 		CD1677E748BCF0893C62B56E /* Pods */ = {
@@ -408,9 +468,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BCCBD4D42657E0E3007805D9 /* WNNetworkManager.swift in Sources */,
 				BCCBD48A2657D636007805D9 /* ViewController.swift in Sources */,
+				BCCBD4C72657DCD5007805D9 /* WNPhotoViewModel.swift in Sources */,
 				BCCBD4862657D636007805D9 /* AppDelegate.swift in Sources */,
+				BCCBD4FB2657FF38007805D9 /* AppConfigProvider.swift in Sources */,
+				BCCBD4DD2657E100007805D9 /* WNNetworkHandler.swift in Sources */,
 				BCCBD4882657D636007805D9 /* SceneDelegate.swift in Sources */,
+				BCCBD4E32657E13F007805D9 /* WanderAppConfig.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -418,7 +483,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BCCBD4D52657E0E3007805D9 /* WNNetworkManager.swift in Sources */,
 				BCCBD49D2657D638007805D9 /* WanderTests.swift in Sources */,
+				BCCBD4FC2657FF38007805D9 /* AppConfigProvider.swift in Sources */,
+				BCCBD4DE2657E100007805D9 /* WNNetworkHandler.swift in Sources */,
+				BCCBD4E42657E13F007805D9 /* WanderAppConfig.swift in Sources */,
+				BCCBD4C82657DCD5007805D9 /* WNPhotoViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

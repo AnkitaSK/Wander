@@ -7,16 +7,12 @@
 
 import UIKit
 
-let kApiKey = "de7c19d60a8c2baefa17e4f9e43ce99f"
-let kSecretKey = "563a328a218c455c"
-
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
-
-
-
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         FlickrKit.shared().initialize(withAPIKey: kApiKey, sharedSecret: kSecretKey)
+        
+        AppConfigHandler.provider = ClientAppConfigProvider()
         return true
     }
 
