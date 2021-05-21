@@ -1,0 +1,750 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 51;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		023A7D1A3906B99681281C76 /* Pods_WanderTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 89B4C62A97262790DDDE895F /* Pods_WanderTests.framework */; };
+		7AD68549311CB61A6539E989 /* Pods_Wander_WanderUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3EF398473910F63904C2A383 /* Pods_Wander_WanderUITests.framework */; };
+		87C2E2C159FE40C6AC45CC68 /* Pods_Wander.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0FC742705DEE2855515F3D19 /* Pods_Wander.framework */; };
+		BCCBD4862657D636007805D9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCCBD4852657D636007805D9 /* AppDelegate.swift */; };
+		BCCBD4882657D636007805D9 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCCBD4872657D636007805D9 /* SceneDelegate.swift */; };
+		BCCBD48A2657D636007805D9 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCCBD4892657D636007805D9 /* ViewController.swift */; };
+		BCCBD48D2657D636007805D9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BCCBD48B2657D636007805D9 /* Main.storyboard */; };
+		BCCBD48F2657D638007805D9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BCCBD48E2657D638007805D9 /* Assets.xcassets */; };
+		BCCBD4922657D638007805D9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BCCBD4902657D638007805D9 /* LaunchScreen.storyboard */; };
+		BCCBD49D2657D638007805D9 /* WanderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCCBD49C2657D638007805D9 /* WanderTests.swift */; };
+		BCCBD4A82657D638007805D9 /* WanderUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCCBD4A72657D638007805D9 /* WanderUITests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		BCCBD4992657D638007805D9 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BCCBD47A2657D636007805D9 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = BCCBD4812657D636007805D9;
+			remoteInfo = Wander;
+		};
+		BCCBD4A42657D638007805D9 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BCCBD47A2657D636007805D9 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = BCCBD4812657D636007805D9;
+			remoteInfo = Wander;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		0FC742705DEE2855515F3D19 /* Pods_Wander.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Wander.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		13DD3B5EB13F4D44396FF4F1 /* Pods-Wander-WanderUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Wander-WanderUITests.debug.xcconfig"; path = "Target Support Files/Pods-Wander-WanderUITests/Pods-Wander-WanderUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		3EF398473910F63904C2A383 /* Pods_Wander_WanderUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Wander_WanderUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		71C07779BFDF6B82405EDB36 /* Pods-WanderTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WanderTests.debug.xcconfig"; path = "Target Support Files/Pods-WanderTests/Pods-WanderTests.debug.xcconfig"; sourceTree = "<group>"; };
+		80D339B4FCAF64843A1D3207 /* Pods-Wander.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Wander.debug.xcconfig"; path = "Target Support Files/Pods-Wander/Pods-Wander.debug.xcconfig"; sourceTree = "<group>"; };
+		89B4C62A97262790DDDE895F /* Pods_WanderTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WanderTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		9652F0FB352B9C8A7745578F /* Pods-Wander-WanderUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Wander-WanderUITests.release.xcconfig"; path = "Target Support Files/Pods-Wander-WanderUITests/Pods-Wander-WanderUITests.release.xcconfig"; sourceTree = "<group>"; };
+		AC3A1C269F79A878AFBE0F43 /* Pods-Wander.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Wander.release.xcconfig"; path = "Target Support Files/Pods-Wander/Pods-Wander.release.xcconfig"; sourceTree = "<group>"; };
+		BCCBD4822657D636007805D9 /* Wander.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Wander.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		BCCBD4852657D636007805D9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		BCCBD4872657D636007805D9 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		BCCBD4892657D636007805D9 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		BCCBD48C2657D636007805D9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		BCCBD48E2657D638007805D9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		BCCBD4912657D638007805D9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		BCCBD4932657D638007805D9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BCCBD4982657D638007805D9 /* WanderTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WanderTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		BCCBD49C2657D638007805D9 /* WanderTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WanderTests.swift; sourceTree = "<group>"; };
+		BCCBD49E2657D638007805D9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BCCBD4A32657D638007805D9 /* WanderUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WanderUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		BCCBD4A72657D638007805D9 /* WanderUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WanderUITests.swift; sourceTree = "<group>"; };
+		BCCBD4A92657D638007805D9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BCCBD4BF2657D877007805D9 /* Wander-bridging-header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Wander-bridging-header.h"; sourceTree = "<group>"; };
+		CDF407E9B6D701A2B2C4F0CD /* Pods-WanderTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WanderTests.release.xcconfig"; path = "Target Support Files/Pods-WanderTests/Pods-WanderTests.release.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		BCCBD47F2657D636007805D9 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				87C2E2C159FE40C6AC45CC68 /* Pods_Wander.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BCCBD4952657D638007805D9 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				023A7D1A3906B99681281C76 /* Pods_WanderTests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BCCBD4A02657D638007805D9 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7AD68549311CB61A6539E989 /* Pods_Wander_WanderUITests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		11E9868BDFA3F50CE6DEA612 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				0FC742705DEE2855515F3D19 /* Pods_Wander.framework */,
+				3EF398473910F63904C2A383 /* Pods_Wander_WanderUITests.framework */,
+				89B4C62A97262790DDDE895F /* Pods_WanderTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		BCCBD4792657D636007805D9 = {
+			isa = PBXGroup;
+			children = (
+				BCCBD4BF2657D877007805D9 /* Wander-bridging-header.h */,
+				BCCBD4842657D636007805D9 /* Wander */,
+				BCCBD49B2657D638007805D9 /* WanderTests */,
+				BCCBD4A62657D638007805D9 /* WanderUITests */,
+				BCCBD4832657D636007805D9 /* Products */,
+				CD1677E748BCF0893C62B56E /* Pods */,
+				11E9868BDFA3F50CE6DEA612 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		BCCBD4832657D636007805D9 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				BCCBD4822657D636007805D9 /* Wander.app */,
+				BCCBD4982657D638007805D9 /* WanderTests.xctest */,
+				BCCBD4A32657D638007805D9 /* WanderUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		BCCBD4842657D636007805D9 /* Wander */ = {
+			isa = PBXGroup;
+			children = (
+				BCCBD4852657D636007805D9 /* AppDelegate.swift */,
+				BCCBD4872657D636007805D9 /* SceneDelegate.swift */,
+				BCCBD4892657D636007805D9 /* ViewController.swift */,
+				BCCBD48B2657D636007805D9 /* Main.storyboard */,
+				BCCBD48E2657D638007805D9 /* Assets.xcassets */,
+				BCCBD4902657D638007805D9 /* LaunchScreen.storyboard */,
+				BCCBD4932657D638007805D9 /* Info.plist */,
+			);
+			path = Wander;
+			sourceTree = "<group>";
+		};
+		BCCBD49B2657D638007805D9 /* WanderTests */ = {
+			isa = PBXGroup;
+			children = (
+				BCCBD49C2657D638007805D9 /* WanderTests.swift */,
+				BCCBD49E2657D638007805D9 /* Info.plist */,
+			);
+			path = WanderTests;
+			sourceTree = "<group>";
+		};
+		BCCBD4A62657D638007805D9 /* WanderUITests */ = {
+			isa = PBXGroup;
+			children = (
+				BCCBD4A72657D638007805D9 /* WanderUITests.swift */,
+				BCCBD4A92657D638007805D9 /* Info.plist */,
+			);
+			path = WanderUITests;
+			sourceTree = "<group>";
+		};
+		CD1677E748BCF0893C62B56E /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				80D339B4FCAF64843A1D3207 /* Pods-Wander.debug.xcconfig */,
+				AC3A1C269F79A878AFBE0F43 /* Pods-Wander.release.xcconfig */,
+				13DD3B5EB13F4D44396FF4F1 /* Pods-Wander-WanderUITests.debug.xcconfig */,
+				9652F0FB352B9C8A7745578F /* Pods-Wander-WanderUITests.release.xcconfig */,
+				71C07779BFDF6B82405EDB36 /* Pods-WanderTests.debug.xcconfig */,
+				CDF407E9B6D701A2B2C4F0CD /* Pods-WanderTests.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		BCCBD4812657D636007805D9 /* Wander */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BCCBD4AC2657D638007805D9 /* Build configuration list for PBXNativeTarget "Wander" */;
+			buildPhases = (
+				79CC5930B4674FAB330B73D4 /* [CP] Check Pods Manifest.lock */,
+				BCCBD47E2657D636007805D9 /* Sources */,
+				BCCBD47F2657D636007805D9 /* Frameworks */,
+				BCCBD4802657D636007805D9 /* Resources */,
+				B2AB853C6A284B6AB9ED504D /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Wander;
+			productName = Wander;
+			productReference = BCCBD4822657D636007805D9 /* Wander.app */;
+			productType = "com.apple.product-type.application";
+		};
+		BCCBD4972657D638007805D9 /* WanderTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BCCBD4AF2657D638007805D9 /* Build configuration list for PBXNativeTarget "WanderTests" */;
+			buildPhases = (
+				915CFD3A39C5CE53C4592696 /* [CP] Check Pods Manifest.lock */,
+				BCCBD4942657D638007805D9 /* Sources */,
+				BCCBD4952657D638007805D9 /* Frameworks */,
+				BCCBD4962657D638007805D9 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				BCCBD49A2657D638007805D9 /* PBXTargetDependency */,
+			);
+			name = WanderTests;
+			productName = WanderTests;
+			productReference = BCCBD4982657D638007805D9 /* WanderTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		BCCBD4A22657D638007805D9 /* WanderUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BCCBD4B22657D638007805D9 /* Build configuration list for PBXNativeTarget "WanderUITests" */;
+			buildPhases = (
+				82154878D1E2E9C4FDF13CFA /* [CP] Check Pods Manifest.lock */,
+				BCCBD49F2657D638007805D9 /* Sources */,
+				BCCBD4A02657D638007805D9 /* Frameworks */,
+				BCCBD4A12657D638007805D9 /* Resources */,
+				EE473139A8CDD17853BD4BB5 /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				BCCBD4A52657D638007805D9 /* PBXTargetDependency */,
+			);
+			name = WanderUITests;
+			productName = WanderUITests;
+			productReference = BCCBD4A32657D638007805D9 /* WanderUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		BCCBD47A2657D636007805D9 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1220;
+				LastUpgradeCheck = 1220;
+				TargetAttributes = {
+					BCCBD4812657D636007805D9 = {
+						CreatedOnToolsVersion = 12.2;
+					};
+					BCCBD4972657D638007805D9 = {
+						CreatedOnToolsVersion = 12.2;
+						TestTargetID = BCCBD4812657D636007805D9;
+					};
+					BCCBD4A22657D638007805D9 = {
+						CreatedOnToolsVersion = 12.2;
+						TestTargetID = BCCBD4812657D636007805D9;
+					};
+				};
+			};
+			buildConfigurationList = BCCBD47D2657D636007805D9 /* Build configuration list for PBXProject "Wander" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = BCCBD4792657D636007805D9;
+			productRefGroup = BCCBD4832657D636007805D9 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				BCCBD4812657D636007805D9 /* Wander */,
+				BCCBD4972657D638007805D9 /* WanderTests */,
+				BCCBD4A22657D638007805D9 /* WanderUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		BCCBD4802657D636007805D9 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BCCBD4922657D638007805D9 /* LaunchScreen.storyboard in Resources */,
+				BCCBD48F2657D638007805D9 /* Assets.xcassets in Resources */,
+				BCCBD48D2657D636007805D9 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BCCBD4962657D638007805D9 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BCCBD4A12657D638007805D9 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		79CC5930B4674FAB330B73D4 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Wander-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		82154878D1E2E9C4FDF13CFA /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Wander-WanderUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		915CFD3A39C5CE53C4592696 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-WanderTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B2AB853C6A284B6AB9ED504D /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Wander/Pods-Wander-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Wander/Pods-Wander-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Wander/Pods-Wander-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		EE473139A8CDD17853BD4BB5 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Wander-WanderUITests/Pods-Wander-WanderUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Wander-WanderUITests/Pods-Wander-WanderUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Wander-WanderUITests/Pods-Wander-WanderUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		BCCBD47E2657D636007805D9 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BCCBD48A2657D636007805D9 /* ViewController.swift in Sources */,
+				BCCBD4862657D636007805D9 /* AppDelegate.swift in Sources */,
+				BCCBD4882657D636007805D9 /* SceneDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BCCBD4942657D638007805D9 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BCCBD49D2657D638007805D9 /* WanderTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BCCBD49F2657D638007805D9 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BCCBD4A82657D638007805D9 /* WanderUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		BCCBD49A2657D638007805D9 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = BCCBD4812657D636007805D9 /* Wander */;
+			targetProxy = BCCBD4992657D638007805D9 /* PBXContainerItemProxy */;
+		};
+		BCCBD4A52657D638007805D9 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = BCCBD4812657D636007805D9 /* Wander */;
+			targetProxy = BCCBD4A42657D638007805D9 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		BCCBD48B2657D636007805D9 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				BCCBD48C2657D636007805D9 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		BCCBD4902657D638007805D9 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				BCCBD4912657D638007805D9 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		BCCBD4AA2657D638007805D9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.2;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		BCCBD4AB2657D638007805D9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		BCCBD4AD2657D638007805D9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 80D339B4FCAF64843A1D3207 /* Pods-Wander.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = Wander/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.ankita.Wander;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "/Users/ankita/Documents/Ankita's/Wander/Wander/Wander-bridging-header.h";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		BCCBD4AE2657D638007805D9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = AC3A1C269F79A878AFBE0F43 /* Pods-Wander.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = Wander/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.ankita.Wander;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "/Users/ankita/Documents/Ankita's/Wander/Wander/Wander-bridging-header.h";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		BCCBD4B02657D638007805D9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 71C07779BFDF6B82405EDB36 /* Pods-WanderTests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = WanderTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.ankita.WanderTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Wander.app/Wander";
+			};
+			name = Debug;
+		};
+		BCCBD4B12657D638007805D9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = CDF407E9B6D701A2B2C4F0CD /* Pods-WanderTests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = WanderTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.ankita.WanderTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Wander.app/Wander";
+			};
+			name = Release;
+		};
+		BCCBD4B32657D638007805D9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 13DD3B5EB13F4D44396FF4F1 /* Pods-Wander-WanderUITests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = WanderUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.ankita.WanderUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = Wander;
+			};
+			name = Debug;
+		};
+		BCCBD4B42657D638007805D9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9652F0FB352B9C8A7745578F /* Pods-Wander-WanderUITests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = WanderUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.ankita.WanderUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = Wander;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		BCCBD47D2657D636007805D9 /* Build configuration list for PBXProject "Wander" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BCCBD4AA2657D638007805D9 /* Debug */,
+				BCCBD4AB2657D638007805D9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		BCCBD4AC2657D638007805D9 /* Build configuration list for PBXNativeTarget "Wander" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BCCBD4AD2657D638007805D9 /* Debug */,
+				BCCBD4AE2657D638007805D9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		BCCBD4AF2657D638007805D9 /* Build configuration list for PBXNativeTarget "WanderTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BCCBD4B02657D638007805D9 /* Debug */,
+				BCCBD4B12657D638007805D9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		BCCBD4B22657D638007805D9 /* Build configuration list for PBXNativeTarget "WanderUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BCCBD4B32657D638007805D9 /* Debug */,
+				BCCBD4B42657D638007805D9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = BCCBD47A2657D636007805D9 /* Project object */;
+}
