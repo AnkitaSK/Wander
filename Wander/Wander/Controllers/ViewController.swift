@@ -7,7 +7,7 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class ViewController: UITableViewController {
 
     let viewModel = WNPhotoViewModel()
     override func viewDidLoad() {

@@ -28,6 +28,18 @@
 		BCCBD4E42657E13F007805D9 /* WanderAppConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCCBD4E22657E13F007805D9 /* WanderAppConfig.swift */; };
 		BCCBD4FB2657FF38007805D9 /* AppConfigProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCCBD4FA2657FF38007805D9 /* AppConfigProvider.swift */; };
 		BCCBD4FC2657FF38007805D9 /* AppConfigProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCCBD4FA2657FF38007805D9 /* AppConfigProvider.swift */; };
+		BCCBD50626581C59007805D9 /* WNDisplayViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCCBD50426581C59007805D9 /* WNDisplayViewCell.swift */; };
+		BCCBD50726581C59007805D9 /* WNDisplayViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCCBD50426581C59007805D9 /* WNDisplayViewCell.swift */; };
+		BCCBD50826581C59007805D9 /* WNDisplayViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BCCBD50526581C59007805D9 /* WNDisplayViewCell.xib */; };
+		BCCBD50926581C59007805D9 /* WNDisplayViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BCCBD50526581C59007805D9 /* WNDisplayViewCell.xib */; };
+		BCCBD50E26581C8A007805D9 /* WNDisplayListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCCBD50D26581C8A007805D9 /* WNDisplayListViewController.swift */; };
+		BCCBD50F26581C8A007805D9 /* WNDisplayListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCCBD50D26581C8A007805D9 /* WNDisplayListViewController.swift */; };
+		BCCBD51A2659418C007805D9 /* PhotoItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCCBD5192659418C007805D9 /* PhotoItem.swift */; };
+		BCCBD51B2659418C007805D9 /* PhotoItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCCBD5192659418C007805D9 /* PhotoItem.swift */; };
+		BCCBD5232659A9DF007805D9 /* default.png in Resources */ = {isa = PBXBuildFile; fileRef = BCCBD5222659A9DF007805D9 /* default.png */; };
+		BCCBD5242659A9DF007805D9 /* default.png in Resources */ = {isa = PBXBuildFile; fileRef = BCCBD5222659A9DF007805D9 /* default.png */; };
+		BCCBD52C2659B1C7007805D9 /* default1.png in Resources */ = {isa = PBXBuildFile; fileRef = BCCBD52B2659B1C7007805D9 /* default1.png */; };
+		BCCBD52D2659B1C7007805D9 /* default1.png in Resources */ = {isa = PBXBuildFile; fileRef = BCCBD52B2659B1C7007805D9 /* default1.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -76,6 +88,12 @@
 		BCCBD4DC2657E100007805D9 /* WNNetworkHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WNNetworkHandler.swift; sourceTree = "<group>"; };
 		BCCBD4E22657E13F007805D9 /* WanderAppConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WanderAppConfig.swift; sourceTree = "<group>"; };
 		BCCBD4FA2657FF38007805D9 /* AppConfigProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppConfigProvider.swift; sourceTree = "<group>"; };
+		BCCBD50426581C59007805D9 /* WNDisplayViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WNDisplayViewCell.swift; sourceTree = "<group>"; };
+		BCCBD50526581C59007805D9 /* WNDisplayViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = WNDisplayViewCell.xib; sourceTree = "<group>"; };
+		BCCBD50D26581C8A007805D9 /* WNDisplayListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WNDisplayListViewController.swift; sourceTree = "<group>"; };
+		BCCBD5192659418C007805D9 /* PhotoItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoItem.swift; sourceTree = "<group>"; };
+		BCCBD5222659A9DF007805D9 /* default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = default.png; sourceTree = "<group>"; };
+		BCCBD52B2659B1C7007805D9 /* default1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = default1.png; sourceTree = "<group>"; };
 		CDF407E9B6D701A2B2C4F0CD /* Pods-WanderTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WanderTests.release.xcconfig"; path = "Target Support Files/Pods-WanderTests/Pods-WanderTests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -121,6 +139,8 @@
 			isa = PBXGroup;
 			children = (
 				BCCBD4BF2657D877007805D9 /* Wander-bridging-header.h */,
+				BCCBD52B2659B1C7007805D9 /* default1.png */,
+				BCCBD5222659A9DF007805D9 /* default.png */,
 				BCCBD4842657D636007805D9 /* Wander */,
 				BCCBD49B2657D638007805D9 /* WanderTests */,
 				BCCBD4A62657D638007805D9 /* WanderUITests */,
@@ -145,7 +165,7 @@
 			children = (
 				BCCBD4852657D636007805D9 /* AppDelegate.swift */,
 				BCCBD4872657D636007805D9 /* SceneDelegate.swift */,
-				BCCBD4892657D636007805D9 /* ViewController.swift */,
+				BCCBD51326581C8F007805D9 /* Controllers */,
 				BCCBD4E22657E13F007805D9 /* WanderAppConfig.swift */,
 				BCCBD4F92657FF17007805D9 /* Common */,
 				BCCBD4D22657E0C7007805D9 /* Network */,
@@ -181,6 +201,7 @@
 		BCCBD4C32657DC90007805D9 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				BCCBD5192659418C007805D9 /* PhotoItem.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -196,6 +217,8 @@
 		BCCBD4C52657DCA3007805D9 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				BCCBD50426581C59007805D9 /* WNDisplayViewCell.swift */,
+				BCCBD50526581C59007805D9 /* WNDisplayViewCell.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -215,6 +238,15 @@
 				BCCBD4FA2657FF38007805D9 /* AppConfigProvider.swift */,
 			);
 			path = Common;
+			sourceTree = "<group>";
+		};
+		BCCBD51326581C8F007805D9 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				BCCBD50D26581C8A007805D9 /* WNDisplayListViewController.swift */,
+				BCCBD4892657D636007805D9 /* ViewController.swift */,
+			);
+			path = Controllers;
 			sourceTree = "<group>";
 		};
 		CD1677E748BCF0893C62B56E /* Pods */ = {
@@ -338,9 +370,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BCCBD50826581C59007805D9 /* WNDisplayViewCell.xib in Resources */,
+				BCCBD52C2659B1C7007805D9 /* default1.png in Resources */,
 				BCCBD4922657D638007805D9 /* LaunchScreen.storyboard in Resources */,
 				BCCBD48F2657D638007805D9 /* Assets.xcassets in Resources */,
 				BCCBD48D2657D636007805D9 /* Main.storyboard in Resources */,
+				BCCBD5232659A9DF007805D9 /* default.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -348,6 +383,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BCCBD50926581C59007805D9 /* WNDisplayViewCell.xib in Resources */,
+				BCCBD52D2659B1C7007805D9 /* default1.png in Resources */,
+				BCCBD5242659A9DF007805D9 /* default.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -470,6 +508,9 @@
 			files = (
 				BCCBD4D42657E0E3007805D9 /* WNNetworkManager.swift in Sources */,
 				BCCBD48A2657D636007805D9 /* ViewController.swift in Sources */,
+				BCCBD51A2659418C007805D9 /* PhotoItem.swift in Sources */,
+				BCCBD50E26581C8A007805D9 /* WNDisplayListViewController.swift in Sources */,
+				BCCBD50626581C59007805D9 /* WNDisplayViewCell.swift in Sources */,
 				BCCBD4C72657DCD5007805D9 /* WNPhotoViewModel.swift in Sources */,
 				BCCBD4862657D636007805D9 /* AppDelegate.swift in Sources */,
 				BCCBD4FB2657FF38007805D9 /* AppConfigProvider.swift in Sources */,
@@ -489,6 +530,9 @@
 				BCCBD4DE2657E100007805D9 /* WNNetworkHandler.swift in Sources */,
 				BCCBD4E42657E13F007805D9 /* WanderAppConfig.swift in Sources */,
 				BCCBD4C82657DCD5007805D9 /* WNPhotoViewModel.swift in Sources */,
+				BCCBD50F26581C8A007805D9 /* WNDisplayListViewController.swift in Sources */,
+				BCCBD50726581C59007805D9 /* WNDisplayViewCell.swift in Sources */,
+				BCCBD51B2659418C007805D9 /* PhotoItem.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

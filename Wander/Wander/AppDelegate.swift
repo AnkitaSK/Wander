@@ -13,6 +13,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         FlickrKit.shared().initialize(withAPIKey: kApiKey, sharedSecret: kSecretKey)
         
         AppConfigHandler.provider = ClientAppConfigProvider()
+        AppConfigHandler.provider.handleApiConfig()
         return true
     }
 
