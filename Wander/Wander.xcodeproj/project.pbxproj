@@ -10,6 +10,8 @@
 		023A7D1A3906B99681281C76 /* Pods_WanderTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 89B4C62A97262790DDDE895F /* Pods_WanderTests.framework */; };
 		7AD68549311CB61A6539E989 /* Pods_Wander_WanderUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3EF398473910F63904C2A383 /* Pods_Wander_WanderUITests.framework */; };
 		87C2E2C159FE40C6AC45CC68 /* Pods_Wander.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0FC742705DEE2855515F3D19 /* Pods_Wander.framework */; };
+		BC194773265A5B8D00695E06 /* WNImageCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC194772265A5B8D00695E06 /* WNImageCache.swift */; };
+		BC19477A265A98B400695E06 /* UITableViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC194779265A98B400695E06 /* UITableViewExtension.swift */; };
 		BCCBD4862657D636007805D9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCCBD4852657D636007805D9 /* AppDelegate.swift */; };
 		BCCBD4882657D636007805D9 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCCBD4872657D636007805D9 /* SceneDelegate.swift */; };
 		BCCBD48A2657D636007805D9 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCCBD4892657D636007805D9 /* ViewController.swift */; };
@@ -68,6 +70,8 @@
 		89B4C62A97262790DDDE895F /* Pods_WanderTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WanderTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9652F0FB352B9C8A7745578F /* Pods-Wander-WanderUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Wander-WanderUITests.release.xcconfig"; path = "Target Support Files/Pods-Wander-WanderUITests/Pods-Wander-WanderUITests.release.xcconfig"; sourceTree = "<group>"; };
 		AC3A1C269F79A878AFBE0F43 /* Pods-Wander.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Wander.release.xcconfig"; path = "Target Support Files/Pods-Wander/Pods-Wander.release.xcconfig"; sourceTree = "<group>"; };
+		BC194772265A5B8D00695E06 /* WNImageCache.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WNImageCache.swift; sourceTree = "<group>"; };
+		BC194779265A98B400695E06 /* UITableViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITableViewExtension.swift; sourceTree = "<group>"; };
 		BCCBD4822657D636007805D9 /* Wander.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Wander.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BCCBD4852657D636007805D9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BCCBD4872657D636007805D9 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -135,6 +139,14 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		BC194778265A988300695E06 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				BC194779265A98B400695E06 /* UITableViewExtension.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
 		BCCBD4792657D636007805D9 = {
 			isa = PBXGroup;
 			children = (
@@ -165,6 +177,7 @@
 			children = (
 				BCCBD4852657D636007805D9 /* AppDelegate.swift */,
 				BCCBD4872657D636007805D9 /* SceneDelegate.swift */,
+				BC194778265A988300695E06 /* Extensions */,
 				BCCBD51326581C8F007805D9 /* Controllers */,
 				BCCBD4E22657E13F007805D9 /* WanderAppConfig.swift */,
 				BCCBD4F92657FF17007805D9 /* Common */,
@@ -210,6 +223,7 @@
 			isa = PBXGroup;
 			children = (
 				BCCBD4C62657DCD5007805D9 /* WNPhotoViewModel.swift */,
+				BC194772265A5B8D00695E06 /* WNImageCache.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -511,6 +525,8 @@
 				BCCBD51A2659418C007805D9 /* PhotoItem.swift in Sources */,
 				BCCBD50E26581C8A007805D9 /* WNDisplayListViewController.swift in Sources */,
 				BCCBD50626581C59007805D9 /* WNDisplayViewCell.swift in Sources */,
+				BC194773265A5B8D00695E06 /* WNImageCache.swift in Sources */,
+				BC19477A265A98B400695E06 /* UITableViewExtension.swift in Sources */,
 				BCCBD4C72657DCD5007805D9 /* WNPhotoViewModel.swift in Sources */,
 				BCCBD4862657D636007805D9 /* AppDelegate.swift in Sources */,
 				BCCBD4FB2657FF38007805D9 /* AppConfigProvider.swift in Sources */,

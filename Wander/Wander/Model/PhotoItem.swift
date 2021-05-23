@@ -13,7 +13,7 @@ enum Section {
 
 class PhotoItem: Hashable {
     var image: UIImage
-    let url: URL
+    let url: NSURL
     let identifier = UUID()
     
     func hash(into hasher: inout Hasher) {
@@ -23,7 +23,7 @@ class PhotoItem: Hashable {
         return lhs.identifier == rhs.identifier
     }
     
-    init(image: UIImage = UIImage(named: "default.png")!, url: URL) {
+    init(image: UIImage = UIImage(named: "default.png")!, url: NSURL) {
         self.image = image
         self.url = url
     }

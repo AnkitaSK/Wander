@@ -19,79 +19,79 @@ class WNDisplayListViewController: UITableViewController {
     var photoItems = [PhotoItem]()
     
     var dataSource: DataSource! = nil
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
-        tableView.register(WNDisplayViewCell.self, forCellReuseIdentifier: reuseIdentifier)
         
-        viewModel.completionBlock = { 
-            self.photoItems = self.viewModel.photoItems
-            DispatchQueue.main.async {
-                var updatedSnapshot = self.dataSource.snapshot()
-                updatedSnapshot.appendItems(self.photoItems)
-                self.dataSource.apply(updatedSnapshot, animatingDifferences: true)
-            }
-        }
+        registerCells()
+        configureDataSource()
         
-        self.configureDataSource()
-        
+        // todo on location
         loadPhotoUrl()
-        
+        updateUI()
     }
     
-    
+    func registerCells() {
+        tableView.register(WNDisplayViewCell.self)
+    }
     
     func loadPhotoUrl() {
         viewModel.getPhoto(lat: 49.902550, long: 10.884520, accuracy: 16, radius: 0.2)
+        DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 5.0) {
+            self.viewModel.getPhoto(lat: 49.901620, long: 10.885090, accuracy: 16, radius: 0.2)
+        }
     }
     
+    fileprivate func updateUI() {
+        viewModel.completionBlock = {
+            self.photoItems = self.viewModel.photoItems
+            DispatchQueue.main.async {
+                self.applySnanpshot(for: self.photoItems)
+            }
+        }
+    }
     
-    /*
-     dataSource = UITableViewDiffableDataSource<Section, Item>(tableView: tableView) {
-         (tableView: UITableView, indexPath: IndexPath, item: Item) -> UITableViewCell? in
-         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
-         /// - Tag: update
-         var content = cell.defaultContentConfiguration()
-         content.image = item.image
-         ImageCache.publicCache.load(url: item.url as NSURL, item: item) { (fetchedItem, image) in
-             if let img = image, img != fetchedItem.image {
-                 var updatedSnapshot = self.dataSource.snapshot()
-                 if let datasourceIndex = updatedSnapshot.indexOfItem(fetchedItem) {
-                     let item = self.imageObjects[datasourceIndex]
-                     item.image = img
-                     updatedSnapshot.reloadItems([item])
-                     self.dataSource.apply(updatedSnapshot, animatingDifferences: true)
-                 }
-             }
-         }
-         cell.contentConfiguration = content
-         return cell
-     }
-     */
+    fileprivate func loadImage(_ item: PhotoItem) {
+        ImageCache.imageCache.load(url: item.url, item: item) { (fetchedItem, image) in
+            if let img = image, img != fetchedItem.image {
+                var updatedSnapshot = self.dataSource.snapshot()
+                if let datasourceIndex = updatedSnapshot.indexOfItem(fetchedItem) {
+                    let item = self.photoItems[datasourceIndex]
+                    item.image = img
+                    updatedSnapshot.reloadItems([item])
+                    DispatchQueue.main.async {
+                        self.dataSource.apply(updatedSnapshot, animatingDifferences: true)
+                    }
+                }
+            }
+        }
+    }
+    
+    // MARK: TableView
     func configureDataSource() {
         dataSource = DataSource(tableView: tableView) {
             (tableView: UITableView, indexPath: IndexPath, item: PhotoItem) -> UITableViewCell? in
             guard let cell = tableView.dequeueReusableCell(withIdentifier: self.reuseIdentifier, for: indexPath) as? WNDisplayViewCell else { return nil }
             var content = cell.defaultContentConfiguration()
             content.image = item.image
+            self.loadImage(item)
             cell.contentConfiguration = content
             return cell
         }
         
         dataSource.defaultRowAnimation = .fade
-        
-        initialSnapshot()
+        applySnanpshot(for: photoItems)
     }
     
-    func initialSnapshot() {
+    func applySnanpshot(for items: [PhotoItem]) {
         var snapshot = NSDiffableDataSourceSnapshot<Section, PhotoItem>()
         snapshot.appendSections([.main])
-        snapshot.appendItems(photoItems)
+        snapshot.appendItems(items)
         self.dataSource.apply(snapshot, animatingDifferences: true)
     }
 
-    
+    // for more custom UI if needed
     class DataSource: UITableViewDiffableDataSource<Section, PhotoItem> {
-//        var items = [PhotoItem]()
+        
     }
 }

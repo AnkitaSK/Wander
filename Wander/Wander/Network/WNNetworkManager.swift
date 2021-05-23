@@ -13,7 +13,8 @@ class NetworkConfig: WNNetworkConfig {
 }
 
 public class NetworkManager: WNNetworkHandler {
-    typealias WNDataResult = (_ dataResult: [String: Any]) -> Void
+    typealias WNJsonResult = (_ dataResult: [String: Any]) -> Void
+    typealias WNDataResult = (_ data: Data) -> Void
     typealias WNErrorCallback = ((_ error: Error) -> Void)
     
     static let shared = NetworkManager()
@@ -26,7 +27,7 @@ public class NetworkManager: WNNetworkHandler {
     }
     
     func urlRequest(endpoint: String,
-                    result: @escaping WNDataResult,
+                    result: @escaping WNJsonResult,
                     errorCallback: WNErrorCallback?) {
         var requestUrlString = NetworkManager.shared.config.server
         requestUrlString += endpoint
@@ -66,6 +67,33 @@ public class NetworkManager: WNNetworkHandler {
         
         
         task.resume()
+    }
+    
+    func downloadImage(url: NSURL, result: @escaping WNDataResult,
+                       errorCallback: WNErrorCallback?) {
+        urlSession.dataTask(with: url as URL) { (data, response, error) in
+            if let error = error {
+                errorCallback?(error)
+                return
+            }
+            
+            if let httpResponse = response as? HTTPURLResponse {
+                if httpResponse.statusCode == 401 {
+                    print("Unauthorized error")
+                    return
+                } else if httpResponse.statusCode == 404 {
+//                    print(response)
+                    return
+                }
+            }
+            
+            if let data = data {
+                result(data)
+            } else {
+//                errorCallback?(error)
+            }
+            
+        }.resume()
     }
 }
 
