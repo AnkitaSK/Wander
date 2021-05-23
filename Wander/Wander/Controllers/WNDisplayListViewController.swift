@@ -25,10 +25,16 @@ class WNDisplayListViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         navigationItem.title = "Wander"
-        registerCells()
-        configureDataSource()
+        
 //        loadPhotoUrl()
         updateUI()
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        
+        registerCells()
+        configureDataSource()
     }
     
     func registerCells() {
