@@ -48,7 +48,16 @@
                             <outlet property="delegate" destination="F3C-Ow-oSU" id="dLm-U0-UMh"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="pgW-4u-kSF"/>
+                    <navigationItem key="navigationItem" id="pgW-4u-kSF">
+                        <barButtonItem key="rightBarButtonItem" title="Start" id="eoM-So-SYu">
+                            <connections>
+                                <action selector="startStopLocationService:" destination="F3C-Ow-oSU" id="P2s-jE-VKo"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="rightBarButton" destination="eoM-So-SYu" id="lZq-La-CMO"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Yb1-KL-ofm" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

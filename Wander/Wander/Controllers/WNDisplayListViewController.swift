@@ -6,28 +6,28 @@
 //
 
 import UIKit
-
-
+import CoreLocation
 
 class WNDisplayListViewController: UITableViewController {
 
-    var viewModel = WNPhotoViewModel()
-    var observation: NSKeyValueObservation?
+    private var viewModel = WNPhotoViewModel()
+    private let reuseIdentifier = "WNDisplayViewCell"
+    private var photoItems = [PhotoItem]()
+    private var dataSource: DataSource! = nil
     
-    let reuseIdentifier = "WNDisplayViewCell"
+    private var isUpdatingLocation = false
+    private let locationManager = LocationManager.shared
+    private var distance = Measurement(value: 0, unit: UnitLength.meters)
+    private var locationList = [CLLocation]()
     
-    var photoItems = [PhotoItem]()
+    @IBOutlet weak var rightBarButton: UIBarButtonItem!
     
-    var dataSource: DataSource! = nil
-
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        navigationItem.title = "Wander"
         registerCells()
         configureDataSource()
-        
-        // todo on location
-        loadPhotoUrl()
+//        loadPhotoUrl()
         updateUI()
     }
     
@@ -35,11 +35,28 @@ class WNDisplayListViewController: UITableViewController {
         tableView.register(WNDisplayViewCell.self)
     }
     
-    func loadPhotoUrl() {
-        viewModel.getPhoto(lat: 49.902550, long: 10.884520, accuracy: 16, radius: 0.2)
-        DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 5.0) {
-            self.viewModel.getPhoto(lat: 49.901620, long: 10.885090, accuracy: 16, radius: 0.2)
+    @IBAction func startStopLocationService(_ sender: Any) {
+        if !isUpdatingLocation {
+            startLocationService()
+            rightBarButton.title = "Stop"
+        } else {
+            stopLocationService()
+            rightBarButton.title = "Start"
         }
+        isUpdatingLocation = !isUpdatingLocation
+    }
+    
+    
+//    func loadPhotoUrl() {
+//        viewModel.getPhoto(lat: 49.902550, long: 10.884520, accuracy: 16, radius: 0.2)
+//        DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 5.0) {
+//            self.viewModel.getPhoto(lat: 49.901620, long: 10.885090, accuracy: 16, radius: 0.2)
+//        }
+//    }
+    
+    // MARK: Other Methods
+    func fetchImage(for coordinates: CLLocationCoordinate2D) {
+        viewModel.getPhoto(lat: coordinates.latitude, long: coordinates.longitude, accuracy: 16, radius: 0.2)
     }
     
     fileprivate func updateUI() {
@@ -67,7 +84,19 @@ class WNDisplayListViewController: UITableViewController {
         }
     }
     
-    // MARK: TableView
+    // MARK: Location methods
+    private func startLocationService() {
+        locationManager.delegate = self
+        locationManager.activityType = .fitness
+        locationManager.distanceFilter = 100
+        locationManager.startUpdatingLocation()
+    }
+    
+    private func stopLocationService() {
+        locationManager.stopUpdatingLocation()
+    }
+    
+    // MARK: TableView Methods
     func configureDataSource() {
         dataSource = DataSource(tableView: tableView) {
             (tableView: UITableView, indexPath: IndexPath, item: PhotoItem) -> UITableViewCell? in
@@ -93,5 +122,25 @@ class WNDisplayListViewController: UITableViewController {
     // for more custom UI if needed
     class DataSource: UITableViewDiffableDataSource<Section, PhotoItem> {
         
+    }
+}
+
+
+extension WNDisplayListViewController: CLLocationManagerDelegate {
+    func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
+      for newLocation in locations {
+        let howRecent = newLocation.timestamp.timeIntervalSinceNow
+        guard newLocation.horizontalAccuracy < 20 && abs(howRecent) < 10 else { continue }
+        
+        if let lastLocation = locationList.last {
+            let delta = newLocation.distance(from: lastLocation)
+            if delta >= 100 {
+                // fetch image
+                fetchImage(for: lastLocation.coordinate)
+                locationList.append(newLocation)
+            }
+        }
+        
+      }
     }
 }

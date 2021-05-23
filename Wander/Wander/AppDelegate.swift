@@ -10,10 +10,15 @@ import UIKit
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
+        
         FlickrKit.shared().initialize(withAPIKey: kApiKey, sharedSecret: kSecretKey)
         
         AppConfigHandler.provider = ClientAppConfigProvider()
         AppConfigHandler.provider.handleApiConfig()
+        
+        let locationManager = LocationManager.shared
+        locationManager.requestWhenInUseAuthorization()
+        
         return true
     }
 

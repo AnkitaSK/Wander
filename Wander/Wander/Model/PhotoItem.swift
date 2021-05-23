@@ -23,7 +23,7 @@ class PhotoItem: Hashable {
         return lhs.identifier == rhs.identifier
     }
     
-    init(image: UIImage = UIImage(named: "default.png")!, url: NSURL) {
+    init(image: UIImage = UIImage(systemName: "rectangle")!, url: NSURL) {
         self.image = image
         self.url = url
     }
