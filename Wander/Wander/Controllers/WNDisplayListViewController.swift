@@ -25,9 +25,8 @@ class WNDisplayListViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         navigationItem.title = "Wander"
-        
-//        loadPhotoUrl()
         updateUI()
+        tableView.delegate = self
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -51,14 +50,6 @@ class WNDisplayListViewController: UITableViewController {
         }
         isUpdatingLocation = !isUpdatingLocation
     }
-    
-    
-//    func loadPhotoUrl() {
-//        viewModel.getPhoto(lat: 49.902550, long: 10.884520, accuracy: 16, radius: 0.2)
-//        DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 5.0) {
-//            self.viewModel.getPhoto(lat: 49.901620, long: 10.885090, accuracy: 16, radius: 0.2)
-//        }
-//    }
     
     // MARK: Other Methods
     func fetchImage(for coordinates: CLLocationCoordinate2D) {
@@ -104,13 +95,11 @@ class WNDisplayListViewController: UITableViewController {
     
     // MARK: TableView Methods
     func configureDataSource() {
-        dataSource = DataSource(tableView: tableView) {
+        dataSource = DataSource(tableView: tableView) { 
             (tableView: UITableView, indexPath: IndexPath, item: PhotoItem) -> UITableViewCell? in
             guard let cell = tableView.dequeueReusableCell(withIdentifier: self.reuseIdentifier, for: indexPath) as? WNDisplayViewCell else { return nil }
-            var content = cell.defaultContentConfiguration()
-            content.image = item.image
             self.loadImage(item)
-            cell.contentConfiguration = content
+            cell.configCell(with: item)
             return cell
         }
         
@@ -127,11 +116,17 @@ class WNDisplayListViewController: UITableViewController {
 
     // for more custom UI if needed
     class DataSource: UITableViewDiffableDataSource<Section, PhotoItem> {
-        
     }
 }
 
+// MARK: UITableView delegate methods
+extension WNDisplayListViewController {
+    override func tableView(_ tableView: UITableView, viewForFooterInSection section: Int) -> UIView? {
+        return UIView()
+    }
+}
 
+// MARK: Location manager delegate methods
 extension WNDisplayListViewController: CLLocationManagerDelegate {
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
       for newLocation in locations {
@@ -143,10 +138,9 @@ extension WNDisplayListViewController: CLLocationManagerDelegate {
             if delta >= 100 {
                 // fetch image
                 fetchImage(for: lastLocation.coordinate)
-                locationList.append(newLocation)
             }
         }
-        
+        locationList.append(newLocation)
       }
     }
 }

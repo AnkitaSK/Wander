@@ -8,11 +8,15 @@
 import UIKit
 
 class WNDisplayViewCell: UITableViewCell {
-
-    @IBOutlet weak var locationImageView: UIImageView!
+    @IBOutlet var locationImageView: UIImageView!
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
+        locationImageView.contentMode = .scaleAspectFit
+    }
+    
+    func configCell(with item: PhotoItem) {
+        locationImageView.image = item.image
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
