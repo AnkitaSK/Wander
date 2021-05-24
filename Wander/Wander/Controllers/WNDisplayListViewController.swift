@@ -85,7 +85,7 @@ class WNDisplayListViewController: UITableViewController {
     // MARK: Location methods
     private func beginCollectingPhotos() {
         if locationManager.accuracyAuthorization == .reducedAccuracy {
-            locationManager.requestTemporaryFullAccuracyAuthorization(withPurposeKey: kTempLocationAlertMessage) { (error) in
+            locationManager.requestTemporaryFullAccuracyAuthorization(withPurposeKey: tempLocationAlertMessage) { (error) in
                 if self.locationManager.accuracyAuthorization == .fullAccuracy {
                     self.locationAccuracyValue = locationFullAccuracyValue
                 } else {
