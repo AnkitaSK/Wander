@@ -20,7 +20,6 @@
 		BC1A849A265B9F2500A0775C /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC1A8498265B9F2500A0775C /* Constants.swift */; };
 		BCCBD4862657D636007805D9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCCBD4852657D636007805D9 /* AppDelegate.swift */; };
 		BCCBD4882657D636007805D9 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCCBD4872657D636007805D9 /* SceneDelegate.swift */; };
-		BCCBD48A2657D636007805D9 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCCBD4892657D636007805D9 /* ViewController.swift */; };
 		BCCBD48D2657D636007805D9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BCCBD48B2657D636007805D9 /* Main.storyboard */; };
 		BCCBD48F2657D638007805D9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BCCBD48E2657D638007805D9 /* Assets.xcassets */; };
 		BCCBD4922657D638007805D9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BCCBD4902657D638007805D9 /* LaunchScreen.storyboard */; };
@@ -80,7 +79,6 @@
 		BCCBD4822657D636007805D9 /* Wander.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Wander.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BCCBD4852657D636007805D9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BCCBD4872657D636007805D9 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		BCCBD4892657D636007805D9 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		BCCBD48C2657D636007805D9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		BCCBD48E2657D638007805D9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BCCBD4912657D638007805D9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -262,7 +260,6 @@
 			isa = PBXGroup;
 			children = (
 				BCCBD50D26581C8A007805D9 /* WNDisplayListViewController.swift */,
-				BCCBD4892657D636007805D9 /* ViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -522,7 +519,6 @@
 			files = (
 				BCCBD4D42657E0E3007805D9 /* WNNetworkManager.swift in Sources */,
 				BC1A8490265B8FA300A0775C /* UICollectionExtension.swift in Sources */,
-				BCCBD48A2657D636007805D9 /* ViewController.swift in Sources */,
 				BCCBD51A2659418C007805D9 /* PhotoItem.swift in Sources */,
 				BCCBD50E26581C8A007805D9 /* WNDisplayListViewController.swift in Sources */,
 				BCCBD50626581C59007805D9 /* WNDisplayViewCell.swift in Sources */,
@@ -726,6 +722,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = S498345U54;
 				INFOPLIST_FILE = Wander/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -747,6 +744,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = S498345U54;
 				INFOPLIST_FILE = Wander/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

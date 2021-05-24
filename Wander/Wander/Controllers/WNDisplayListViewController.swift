@@ -147,20 +147,30 @@ extension WNDisplayListViewController {
 
 // MARK: Location manager delegate methods
 extension WNDisplayListViewController: CLLocationManagerDelegate {
-    func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
-      for newLocation in locations {
-        let howRecent = newLocation.timestamp.timeIntervalSinceNow
-        guard newLocation.horizontalAccuracy < self.locationAccuracyValue && abs(howRecent) < 10 else { continue }
-        
-        if let lastLocation = locationList.last {
-            let delta = newLocation.distance(from: lastLocation)
-            if delta >= minDistanceInMeter {
-                // fetch image
-                fetchImage(for: lastLocation.coordinate)
+    fileprivate func stopLocationUpdateAfterInterval() {
+        // stop location service after 2 hrs
+        if let backgroundEnterTime = LocationManager.sharedManager.date {
+            if Date().timeIntervalSince(backgroundEnterTime) > locationServiceRunInterval {
+                self.stopLocationService()
             }
         }
-        locationList.append(newLocation)
-      }
+    }
+    
+    func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
+        stopLocationUpdateAfterInterval()
+        for newLocation in locations {
+            let howRecent = newLocation.timestamp.timeIntervalSinceNow
+            guard newLocation.horizontalAccuracy < self.locationAccuracyValue && abs(howRecent) < 10 else { continue }
+            
+            if let lastLocation = locationList.last {
+                let delta = newLocation.distance(from: lastLocation)
+                if delta >= minDistanceInMeter {
+                    // fetch image
+                    fetchImage(for: lastLocation.coordinate)
+                }
+            }
+            locationList.append(newLocation)
+        }
     }
     
     func locationManagerDidChangeAuthorization(_ manager: CLLocationManager) {
