@@ -10,7 +10,7 @@ import Foundation
 let titleName = "Wander"
 let startButton = "Start"
 let stopButton = "Stop"
-let kTempLocationAlertMessage = "WantToGetPhotos"
+let tempLocationAlertMessage = "WantToGetPhotos"
 let minDistanceInMeter = 100.0
 let locationReducedAccuracyValue = 7000.0
 let locationFullAccuracyValue = 20.0
