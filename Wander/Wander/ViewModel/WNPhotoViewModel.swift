@@ -2,13 +2,11 @@
 //  WNPhotoModel.swift
 //  Wander
 //
-//  Created by Ankita on 21.05.21.
+//  Created by Ankita on 22.05.21.
 //
 
 import Foundation
 import FlickrKit
-
-//https://www.flickr.com/services/rest/?method=flickr.photos.search&api_key=a83d8f4dca55c759ab23d54c9f63e2f1&accuracy=16&has_geo=0&lat=49.902550&lon=10.884520&radius=1&format=json&nojsoncallback=1
 
 class WNPhotoViewModel: NSObject {
     

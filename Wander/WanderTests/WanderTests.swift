@@ -2,13 +2,15 @@
 //  WanderTests.swift
 //  WanderTests
 //
-//  Created by Ankita on 21.05.21.
+//  Created by Ankita on 22.05.21.
 //
 
 import XCTest
 @testable import Wander
 
 class WanderTests: XCTestCase {
+    
+    let viewModel = WNPhotoViewModel()
 
     override func setUpWithError() throws {
         // Put setup code here. This method is called before the invocation of each test method in the class.
@@ -19,8 +21,12 @@ class WanderTests: XCTestCase {
     }
 
     func testExample() throws {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
+        let photoExpectation = expectation(description: "photos")
+        viewModel.getPhoto(lat: 49.902550, long: 10.884520)
+        waitForExpectations(timeout: 60) { (error) in
+            photoExpectation.fulfill()
+            XCTAssertNotNil(self.viewModel.photoItems)
+          }
     }
 
     func testPerformanceExample() throws {
