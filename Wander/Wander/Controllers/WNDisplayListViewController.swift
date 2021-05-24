@@ -19,12 +19,13 @@ class WNDisplayListViewController: UITableViewController {
     private let locationManager = LocationManager.shared
     private var distance = Measurement(value: 0, unit: UnitLength.meters)
     private var locationList = [CLLocation]()
+    private var locationAccuracyValue = locationFullAccuracyValue
     
     @IBOutlet weak var rightBarButton: UIBarButtonItem!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        navigationItem.title = "Wander"
+        navigationItem.title = titleName
         updateUI()
         tableView.delegate = self
     }
@@ -42,23 +43,23 @@ class WNDisplayListViewController: UITableViewController {
     
     @IBAction func startStopLocationService(_ sender: Any) {
         if !isUpdatingLocation {
-            startLocationService()
-            rightBarButton.title = "Stop"
+            beginCollectingPhotos()
+            rightBarButton.title = stopButton
         } else {
             stopLocationService()
-            rightBarButton.title = "Start"
+            rightBarButton.title = startButton
         }
         isUpdatingLocation = !isUpdatingLocation
     }
     
     // MARK: Other Methods
     func fetchImage(for coordinates: CLLocationCoordinate2D) {
-        viewModel.getPhoto(lat: coordinates.latitude, long: coordinates.longitude, accuracy: 16, radius: 0.2)
+        viewModel.getPhoto(lat: coordinates.latitude, long: coordinates.longitude)
     }
     
     fileprivate func updateUI() {
         viewModel.completionBlock = {
-            self.photoItems = self.viewModel.photoItems
+            self.photoItems = self.viewModel.photoItems.array.sorted(by: {$0.date > $1.date})
             DispatchQueue.main.async {
                 self.applySnanpshot(for: self.photoItems)
             }
@@ -82,10 +83,28 @@ class WNDisplayListViewController: UITableViewController {
     }
     
     // MARK: Location methods
+    private func beginCollectingPhotos() {
+        if locationManager.accuracyAuthorization == .reducedAccuracy {
+            locationManager.requestTemporaryFullAccuracyAuthorization(withPurposeKey: kTempLocationAlertMessage) { (error) in
+                if self.locationManager.accuracyAuthorization == .fullAccuracy {
+                    self.locationAccuracyValue = locationFullAccuracyValue
+                } else {
+                    self.locationAccuracyValue = locationReducedAccuracyValue
+                }
+                self.startLocationService()
+            }
+        } else {
+            self.locationAccuracyValue = locationReducedAccuracyValue
+            self.startLocationService()
+        }
+    }
+    
     private func startLocationService() {
         locationManager.delegate = self
         locationManager.activityType = .fitness
-        locationManager.distanceFilter = 100
+        locationManager.allowsBackgroundLocationUpdates = true
+        locationManager.showsBackgroundLocationIndicator = true
+        locationManager.distanceFilter = minDistanceInMeter
         locationManager.startUpdatingLocation()
     }
     
@@ -131,16 +150,38 @@ extension WNDisplayListViewController: CLLocationManagerDelegate {
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
       for newLocation in locations {
         let howRecent = newLocation.timestamp.timeIntervalSinceNow
-        guard newLocation.horizontalAccuracy < 20 && abs(howRecent) < 10 else { continue }
+        guard newLocation.horizontalAccuracy < self.locationAccuracyValue && abs(howRecent) < 10 else { continue }
         
         if let lastLocation = locationList.last {
             let delta = newLocation.distance(from: lastLocation)
-            if delta >= 100 {
+            if delta >= minDistanceInMeter {
                 // fetch image
                 fetchImage(for: lastLocation.coordinate)
             }
         }
         locationList.append(newLocation)
       }
+    }
+    
+    func locationManagerDidChangeAuthorization(_ manager: CLLocationManager) {
+        switch manager.authorizationStatus {
+        case .authorizedAlways, .authorizedWhenInUse:
+            beginCollectingPhotos()
+        case .denied, .notDetermined, .restricted:
+            stopLocationService()
+        default:
+            print("Not handled")
+        }
+        
+        switch manager.accuracyAuthorization {
+        case .reducedAccuracy:
+            self.locationAccuracyValue = locationFullAccuracyValue
+            self.startLocationService()
+        case .fullAccuracy:
+            self.locationAccuracyValue = locationReducedAccuracyValue
+            self.startLocationService()
+        default:
+            print("undefined")
+        }
     }
 }

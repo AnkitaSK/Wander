@@ -14,6 +14,10 @@
 		BC19477A265A98B400695E06 /* UITableViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC194779265A98B400695E06 /* UITableViewExtension.swift */; };
 		BC194788265AB16500695E06 /* WNLocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC194787265AB16500695E06 /* WNLocationManager.swift */; };
 		BC19478F265AB34E00695E06 /* WNLocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC194787265AB16500695E06 /* WNLocationManager.swift */; };
+		BC1A8490265B8FA300A0775C /* UICollectionExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC1A848F265B8FA300A0775C /* UICollectionExtension.swift */; };
+		BC1A8491265B8FA300A0775C /* UICollectionExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC1A848F265B8FA300A0775C /* UICollectionExtension.swift */; };
+		BC1A8499265B9F2500A0775C /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC1A8498265B9F2500A0775C /* Constants.swift */; };
+		BC1A849A265B9F2500A0775C /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC1A8498265B9F2500A0775C /* Constants.swift */; };
 		BCCBD4862657D636007805D9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCCBD4852657D636007805D9 /* AppDelegate.swift */; };
 		BCCBD4882657D636007805D9 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCCBD4872657D636007805D9 /* SceneDelegate.swift */; };
 		BCCBD48A2657D636007805D9 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCCBD4892657D636007805D9 /* ViewController.swift */; };
@@ -71,6 +75,8 @@
 		BC194772265A5B8D00695E06 /* WNImageCache.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WNImageCache.swift; sourceTree = "<group>"; };
 		BC194779265A98B400695E06 /* UITableViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITableViewExtension.swift; sourceTree = "<group>"; };
 		BC194787265AB16500695E06 /* WNLocationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WNLocationManager.swift; sourceTree = "<group>"; };
+		BC1A848F265B8FA300A0775C /* UICollectionExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UICollectionExtension.swift; sourceTree = "<group>"; };
+		BC1A8498265B9F2500A0775C /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		BCCBD4822657D636007805D9 /* Wander.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Wander.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BCCBD4852657D636007805D9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BCCBD4872657D636007805D9 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -140,6 +146,7 @@
 			isa = PBXGroup;
 			children = (
 				BC194779265A98B400695E06 /* UITableViewExtension.swift */,
+				BC1A848F265B8FA300A0775C /* UICollectionExtension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -246,6 +253,7 @@
 			isa = PBXGroup;
 			children = (
 				BCCBD4FA2657FF38007805D9 /* AppConfigProvider.swift */,
+				BC1A8498265B9F2500A0775C /* Constants.swift */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -513,11 +521,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				BCCBD4D42657E0E3007805D9 /* WNNetworkManager.swift in Sources */,
+				BC1A8490265B8FA300A0775C /* UICollectionExtension.swift in Sources */,
 				BCCBD48A2657D636007805D9 /* ViewController.swift in Sources */,
 				BCCBD51A2659418C007805D9 /* PhotoItem.swift in Sources */,
 				BCCBD50E26581C8A007805D9 /* WNDisplayListViewController.swift in Sources */,
 				BCCBD50626581C59007805D9 /* WNDisplayViewCell.swift in Sources */,
 				BC194773265A5B8D00695E06 /* WNImageCache.swift in Sources */,
+				BC1A8499265B9F2500A0775C /* Constants.swift in Sources */,
 				BC19477A265A98B400695E06 /* UITableViewExtension.swift in Sources */,
 				BCCBD4C72657DCD5007805D9 /* WNPhotoViewModel.swift in Sources */,
 				BCCBD4862657D636007805D9 /* AppDelegate.swift in Sources */,
@@ -536,6 +546,7 @@
 				BCCBD4D52657E0E3007805D9 /* WNNetworkManager.swift in Sources */,
 				BCCBD49D2657D638007805D9 /* WanderTests.swift in Sources */,
 				BCCBD4FC2657FF38007805D9 /* AppConfigProvider.swift in Sources */,
+				BC1A8491265B8FA300A0775C /* UICollectionExtension.swift in Sources */,
 				BC19478F265AB34E00695E06 /* WNLocationManager.swift in Sources */,
 				BCCBD4DE2657E100007805D9 /* WNNetworkHandler.swift in Sources */,
 				BCCBD4E42657E13F007805D9 /* WanderAppConfig.swift in Sources */,
@@ -543,6 +554,7 @@
 				BCCBD50F26581C8A007805D9 /* WNDisplayListViewController.swift in Sources */,
 				BCCBD50726581C59007805D9 /* WNDisplayViewCell.swift in Sources */,
 				BCCBD51B2659418C007805D9 /* PhotoItem.swift in Sources */,
+				BC1A849A265B9F2500A0775C /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
