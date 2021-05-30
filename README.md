@@ -1,5 +1,5 @@
 # Wander
-this app enables you to track your walk with images.
+this app enables you to track your walk outside with by dowloading and showing nearby images.
 
 App features
 
