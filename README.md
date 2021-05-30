@@ -7,6 +7,7 @@ App features
 2. image caching
 3. sort images by latest image on top
 4. this is developed as an example for using 'UITableViewDiffableDataSource'
+5. this app used flikr photo search api
 
 
 ![IMG_0090](https://user-images.githubusercontent.com/6023419/120106373-febec800-c15c-11eb-94cc-a87d0700d0b8.PNG)
